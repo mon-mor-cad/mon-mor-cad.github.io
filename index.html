@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Moncerrath Morales, marketing student at Douglas College in Vancouver. Portfolio of marketing strategy, digital marketing and graphic design work.">
+<title>Moncerrath Morales Marketing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: an editorial scroll of alternating white and powder-blue bands. Each section title is thin serif caps
+   crossed by a calligraphy word, like the template. Single committed light look, every color set explicitly. */
+:root{
+  --paper:#fbfbf9;
+  --sky:#d7e3f2;
+  --sky-2:#c3d4ea;
+  --ink:#26303d;
+  --muted:#5f6b7b;
+  --blue:#1f5f8b;
+  --script-c:#7f97b4;
+  --line:#c9d3df;
+  --serif:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --script:"Pinyon Script", "Snell Roundhand", "Brush Script MT", cursive;
+  --sans:"Jost", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+section{padding-block:clamp(64px,9vw,112px)}
+.band{background:var(--sky)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+.label{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+
+/* section title: serif caps + calligraphy overlap */
+.ttl{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:clamp(36px,5vw,60px)}
+.ttl .caps{font-family:var(--serif);font-size:clamp(30px,4.6vw,52px);letter-spacing:.08em;text-transform:uppercase;line-height:1;color:var(--ink)}
+.ttl .scr{font-family:var(--script);font-size:clamp(44px,6.6vw,80px);line-height:.8;color:var(--script-c);margin-top:-.32em;padding-left:1.4em}
+.ttl p{max-width:56ch;color:var(--muted);margin:22px 0 0}
+.ttl.left{align-items:flex-start;text-align:left}
+.ttl.left .scr{padding-left:1.1em}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(251,251,249,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--paper)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.nav .mark{font-family:var(--serif);letter-spacing:.14em;font-size:14px;text-decoration:none;text-transform:uppercase}
+.nav ul{display:flex;gap:clamp(12px,2.4vw,30px);list-style:none;margin:0;padding:0;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--blue)}
+@media (max-width:700px){.nav ul li:not(:last-child){display:none}}
+
+/* hero */
+.hero{padding-block:clamp(72px,12vw,150px) clamp(56px,8vw,100px);text-align:center;background:linear-gradient(var(--paper) 70%, var(--sky))}
+.hero .who{font-family:var(--serif);letter-spacing:.32em;font-size:clamp(12px,1.4vw,15px);text-transform:uppercase;margin:0 0 clamp(26px,4vw,44px)}
+.hero h1{display:flex;flex-direction:column;align-items:center}
+.hero .caps{font-family:var(--serif);font-size:clamp(48px,11vw,150px);letter-spacing:.04em;line-height:.9;text-transform:uppercase}
+.hero .scr{font-family:var(--script);font-size:clamp(64px,13vw,180px);line-height:.7;color:var(--script-c);margin-top:-.28em;padding-left:1.6em}
+.hero .city{font-family:var(--serif);letter-spacing:.32em;font-size:clamp(12px,1.4vw,15px);text-transform:uppercase;margin:clamp(30px,5vw,56px) 0 0}
+.hero .open{display:inline-block;margin-top:22px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);border:1px solid var(--blue);border-radius:999px;padding:8px 18px}
+
+/* hello */
+.hello .card{background:var(--paper);border-radius:6px;padding:clamp(24px,4vw,52px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:clamp(28px,4vw,56px);box-shadow:0 30px 60px -40px rgba(31,63,100,.45)}
+.hello .copy p{margin:0 0 16px;max-width:60ch}
+.hello .sub{font-family:var(--serif);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:-14px 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink);background:var(--paper)}
+.photo{position:relative;align-self:start}
+.photo img{border-radius:4px;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;width:100%}
+.photo .tag{position:absolute;font-family:var(--script);font-size:30px;line-height:1;color:var(--blue);background:var(--paper);border:1px solid var(--line);padding:8px 16px 4px;border-radius:999px}
+.photo .t1{top:-16px;right:-12px;transform:rotate(6deg)}
+.photo .t2{bottom:18px;left:-16px;transform:rotate(-5deg)}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:400 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:11px 18px;border-radius:999px;border:1px solid var(--blue);color:var(--blue);background:transparent;cursor:pointer}
+.btn.solid{background:var(--blue);color:var(--paper)}
+.btn:hover{background:var(--blue);color:var(--paper)}
+@media (max-width:820px){.hello .card{grid-template-columns:1fr}.photo{order:-1;max-width:420px;justify-self:center;width:100%}}
+
+/* skills */
+.skills .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+.logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 12px}
+.logo{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-size:13px;line-height:1.25;color:var(--muted)}
+.logo b{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font:500 16px var(--sans);color:#fff}
+.list{list-style:none;padding:0;margin:34px 0 0;display:flex;flex-direction:column;gap:12px}
+.list li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:12px;align-items:baseline;font-size:15px}
+.list li::before{content:"";width:9px;height:9px;border:1px solid var(--blue);border-radius:50%;transform:translateY(-1px)}
+.certs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.cert{border:1px solid var(--line);background:#fff;padding:22px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;box-shadow:0 18px 30px -24px rgba(31,63,100,.5)}
+.cert .seal{width:44px;height:44px;border-radius:50%;border:1px solid var(--script-c);display:grid;place-items:center;font-family:var(--script);font-size:24px;color:var(--blue)}
+.cert h3{font-family:var(--serif);font-size:17px;line-height:1.25}
+.cert span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cert.wide{grid-column:1/-1}
+@media (max-width:820px){.skills .grid{grid-template-columns:1fr}}
+@media (max-width:420px){.logos{grid-template-columns:repeat(2,minmax(0,1fr))}.certs{grid-template-columns:1fr}}
+
+/* experience */
+.exp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.8vw,22px)}
+.feature{grid-column:1/-1;background:var(--paper);border-radius:4px;padding:clamp(22px,3.4vw,40px);box-shadow:0 22px 40px -30px rgba(31,63,100,.6);display:flex;flex-direction:column;gap:28px}
+.f-head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:24px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:24px}
+.feature h3{font-family:var(--serif);font-size:clamp(32px,4vw,46px);line-height:1;margin-top:8px}
+.feature .role{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:400}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stats div{display:flex;flex-direction:column;gap:4px}
+.stats b{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:1;color:var(--blue);font-variant-numeric:tabular-nums}
+.stats span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.roles{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,4vw,48px)}
+.r-t{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;margin:0 0 10px;align-items:baseline}
+.r-t b{font-family:var(--serif);font-weight:400;font-size:21px}
+.r-t span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.roles ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.roles li{position:relative;padding-left:18px;font-size:15px;color:var(--muted);line-height:1.5}
+.roles li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border:1px solid var(--blue);border-radius:50%}
+@media (max-width:860px){.f-head,.roles{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.job{background:var(--paper);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 22px 40px -30px rgba(31,63,100,.6)}
+.job .top{aspect-ratio:16/9;display:grid;place-items:center;position:relative;background:linear-gradient(160deg,#eef3f9,#dfe8f3)}
+.job .top .mono{font-family:var(--serif);font-size:clamp(40px,5vw,60px);color:var(--blue);letter-spacing:.02em}
+.job .top .big{font-family:var(--serif);font-size:clamp(46px,5.6vw,68px);line-height:1;color:var(--blue)}
+.job .top .big small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:8px;text-align:center}
+.job .when{position:absolute;top:12px;left:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--paper);padding:4px 10px;border-radius:999px;color:var(--muted)}
+.job .body{padding:18px 18px 22px;display:flex;flex-direction:column;gap:6px}
+.job h3{font-family:var(--serif);font-size:21px;line-height:1.15}
+.job .role{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:400}
+.job p{margin:4px 0 0;font-size:15px;color:var(--muted)}
+@media (max-width:900px){.exp{grid-template-columns:repeat(2,minmax(0,1fr))}.exp .job:last-child{grid-column:1/-1}}
+@media (max-width:480px){.exp{grid-template-columns:1fr}.job .top{aspect-ratio:16/7}}
+.edu{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:40px;font-size:15px;color:var(--muted);text-align:center}
+.edu b{font-weight:500;color:var(--ink)}
+
+/* project sections */
+.proj{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+.proj.flip{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.proj.flip .stage{order:2}
+.proj .txt p{margin:0 0 14px;color:var(--muted);max-width:52ch}
+.proj .txt .ttl{margin-bottom:24px}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px;margin:18px 0 22px}
+.meta dt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.meta dd{margin:0}
+@media (max-width:860px){.proj,.proj.flip{grid-template-columns:1fr}.proj.flip .stage{order:0}}
+
+.stage{position:relative;min-width:0}
+.shot{display:block;padding:0;border:0;background:none;cursor:zoom-in;width:100%;text-align:left}
+.shadow{box-shadow:0 26px 50px -28px rgba(31,63,100,.55)}
+
+/* graphic design collage */
+.gd{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:auto auto;gap:14px;align-items:end}
+.gd .book{grid-column:1/4;display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#eef2f7;padding:16px;border-radius:4px}
+.gd .book img{box-shadow:0 14px 22px -14px rgba(0,0,0,.45)}
+.gd .stem{grid-column:4/7;background:#f4efee;border-radius:4px;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center}
+.gd .stem .lg{grid-column:1/-1;height:54px;width:auto;object-fit:contain}
+.gd .stem img.p{box-shadow:0 12px 20px -14px rgba(0,0,0,.4)}
+.gd .braz{grid-column:1/3;background:#2f5e3b;border-radius:4px;overflow:hidden;aspect-ratio:1/1}
+.gd .braz img{width:100%;height:100%;object-fit:cover}
+.gd .note{grid-column:3/7;align-self:center;padding:8px 6px;color:var(--muted);font-size:15px}
+.gd .note .label{color:var(--blue);display:block;margin-bottom:6px}
+.cap{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:620px){.gd .book,.gd .stem{grid-column:1/-1}.gd .braz{grid-column:1/4}.gd .note{grid-column:4/7}}
+
+/* browser + phone */
+.browser{background:#fff;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.browser .bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#eef2f7;border-bottom:1px solid var(--line)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#c4cfdc}
+.browser .bar span{margin-left:14px;font-size:11px;color:var(--muted);background:#fff;border-radius:999px;padding:2px 14px}
+.browser .view{height:clamp(300px,36vw,440px);overflow:hidden;position:relative}
+.browser .view img{width:100%;position:absolute;top:0;left:0;transition:transform 7s ease-in-out}
+.stage:hover .browser .view img,.shot:focus-visible .browser .view img{transform:translateY(calc(-100% + clamp(300px,36vw,440px)))}
+.phone{position:absolute;right:-10px;bottom:-34px;width:26%;aspect-ratio:9/19;border-radius:22px;border:6px solid #1d2530;background:#fff;overflow:hidden;box-shadow:0 26px 40px -20px rgba(0,0,0,.5)}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+@media (max-width:620px){.phone{right:-4px;width:32%}}
+
+/* strategy pair */
+.strat{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.75fr);gap:16px;align-items:end}
+.strat .slides{display:grid;gap:10px}
+.strat .slides img{border-radius:4px}
+
+/* contact */
+.end{text-align:center}
+.end .mail{font-family:var(--serif);font-size:clamp(20px,3.2vw,34px);letter-spacing:.02em;word-break:break-word;margin:6px 0 24px;user-select:all}
+.end .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.toast{min-height:22px;font-size:13px;color:var(--blue);margin-top:12px}
+footer{border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer .wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;letter-spacing:.08em}
+
+/* dialog */
+dialog{border:0;border-radius:8px;padding:0;max-width:min(920px,calc(100% - 32px));width:100%;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px rgba(20,35,55,.45)}
+dialog::backdrop{background:rgba(30,44,62,.55)}
+.dlg{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.dlg .pic{background:#eef2f7;max-height:80vh;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:8px}
+.dlg .pic img{width:100%;height:auto}
+.dlg .t{padding:26px;display:flex;flex-direction:column;gap:10px}
+.dlg h3{font-family:var(--serif);font-size:28px;line-height:1.1}
+.dlg .close{align-self:flex-end}
+@media (max-width:700px){.dlg{grid-template-columns:1fr}.dlg .pic{max-height:48vh}}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#top">Moncerrath Morales</a>
+    <ul>
+      <li><a href="#hello">Hello</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#digital">Digital</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="who">Moncerrath Morales</p>
+    <h1><span class="caps">Marketing</span><span class="scr">Portfolio</span></h1>
+    <p class="city">Vancouver, BC</p>
+    <span class="open">Open to marketing internships · 2027</span>
+  </div>
+</header>
+
+<main>
+<section class="band hello" id="hello">
+  <div class="wrap">
+    <div class="card">
+      <div class="copy">
+        <div class="ttl left"><span class="caps">A little hello</span><span class="scr">Hola!</span></div>
+        <p class="sub">Marketing student · Douglas College</p>
+        <p>I'm Moncerrath, a marketing student in the Post-Graduate Diploma in Marketing at Douglas College in New Westminster, finishing in April 2027.</p>
+        <p>In Ecuador I grew from HR Specialist to Administrative Manager at FUNDASOF, a nonprofit, where I led rebranding and PR campaigns and ran workshops for more than 1,000 university students. From 2020 to 2024 I also ran my own business, Spicy City, and took it to almost 10 fairs and events. Today I volunteer at BASES Thrift Store while I study.</p>
+        <p>I love brands in fashion, beauty, skincare, retail and sport. I'm looking for a marketing internship where I can turn research and strategy into campaigns people notice.</p>
+        <div class="chips">
+          <span class="chip">Fashion</span><span class="chip">Beauty &amp; skincare</span><span class="chip">Retail</span><span class="chip">Sport</span><span class="chip">Photography</span><span class="chip">Español · English</span>
+        </div>
+        <div class="contact-row">
+          <a class="btn solid" href="#contact">Get in touch</a>
+          <a class="btn" href="https://www.linkedin.com/in/moncerrathmorales" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="img/headshot.jpg" alt="Moncerrath Morales in a blue blazer, arms crossed">
+        <span class="tag t1">marketing</span>
+        <span class="tag t2">Vancouver</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <div class="wrap">
+    <div class="ttl"><span class="caps">Skills &amp;</span><span class="scr">Certifications</span></div>
+    <div class="grid">
+      <div>
+        <div class="logos">
+          <div class="logo"><b style="background:#4a7fe0">G</b>Google Workspace</div>
+          <div class="logo"><b style="background:#2468c4">O</b>Outlook</div>
+          <div class="logo"><b style="background:#f07152">Hs</b>HubSpot</div>
+          <div class="logo"><b style="background:#5b8c3a">S</b>Shopify</div>
+          <div class="logo"><b style="background:#33aebd">Ca</b>Canva</div>
+          <div class="logo"><b style="background:#c9661a">Ai</b>Illustrator</div>
+          <div class="logo"><b style="background:#c43369">Id</b>InDesign</div>
+          <div class="logo"><b style="background:#3a3f48">Cr</b>Carrd</div>
+        </div>
+        <ul class="list">
+          <li>Market research: surveys, analysis and presenting results</li>
+          <li>Integrated marketing communications (IMC) planning</li>
+          <li>SEO landing pages and buyer personas</li>
+          <li>Company analysis: SWOT, core competencies, value chain</li>
+          <li>Public relations and rebranding campaigns</li>
+          <li>Event planning: workshops, fairs and community outreach</li>
+          <li>Partnerships, budgets and grant reporting</li>
+        </ul>
+      </div>
+      <div class="certs">
+        <div class="cert"><span class="seal">G</span><h3>Google Digital Marketing &amp; E-commerce</h3><span>Google · Mar – Sep 2025</span></div>
+        <div class="cert"><span class="seal">H</span><h3>HubSpot Inbound Marketing</h3><span>HubSpot Academy · 2026</span></div>
+        <div class="cert wide"><span class="seal">D</span><h3>Post-Graduate Diploma in Marketing</h3><span>Douglas College · 2026 – Apr 2027</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="experience">
+  <div class="wrap">
+    <div class="ttl"><span class="caps">Marketing</span><span class="scr">Experience</span></div>
+    <div class="exp">
+      <article class="feature">
+        <div class="f-head">
+          <div><span class="role">Nonprofit organization · Ecuador · 2021 – 2024</span><h3>FUNDASOF</h3></div>
+          <div class="stats">
+            <div><b>1,300</b><span>entrepreneurs trained</span></div>
+            <div><b>1,000+</b><span>students in workshops</span></div>
+            <div><b>6</b><span>staff &amp; interns led</span></div>
+            <div><b>8</b><span>hiring processes</span></div>
+          </div>
+        </div>
+        <div class="roles">
+          <div class="r">
+            <p class="r-t"><b>Administrative Manager</b><span>Jun 2022 – Sep 2024</span></p>
+            <ul>
+              <li>Led public relations and rebranding campaigns for the foundation.</li>
+              <li>Oversaw events: financial literacy workshops for 1,000+ university students, entrepreneurship fairs and community outreach.</li>
+              <li>Coordinated with the World Council of Credit Unions (WOCCU) and USAID-funded projects, training 1,300 entrepreneurs.</li>
+              <li>Built strategic partnerships with Ecuadorian universities and coordinated internship programs.</li>
+              <li>Supervised a team of 6 staff and interns and managed day-to-day operations and HR policies.</li>
+              <li>Managed project budgets and grants, financial reporting, vendor payments, event logistics and communications.</li>
+              <li>Designed internal policies, job descriptions and institutional regulations.</li>
+            </ul>
+          </div>
+          <div class="r">
+            <p class="r-t"><b>HR Specialist</b><span>Jun 2021 – Jun 2022</span></p>
+            <ul>
+              <li>Directed hiring processes for 8 job openings.</li>
+              <li>Ran employee performance reviews and organizational climate surveys.</li>
+              <li>Developed engagement activities and internal communication strategies.</li>
+              <li>Designed job evaluation tools and talent development plans.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="job">
+        <div class="top"><span class="when">2020 – 2024</span><span class="big">~10<small>fairs &amp; events</small></span></div>
+        <div class="body"><span class="role">Founder &amp; owner</span><h3>Spicy City</h3><p>Ran my own business for four years and took it to almost 10 fairs and events, selling and promoting face to face.</p></div>
+      </article>
+      <article class="job">
+        <div class="top"><span class="when">Sep 2019 – Mar 2020</span><span class="mono">C</span></div>
+        <div class="body"><span class="role">Human Resources intern · Credit union</span><h3>COACET</h3><p>Supported recruitment, onboarding and payroll. Helped with training logistics, employee data updates and performance evaluations.</p></div>
+      </article>
+      <article class="job">
+        <div class="top"><span class="when">Dec 2025 – now</span><span class="mono">B</span></div>
+        <div class="body"><span class="role">Volunteer</span><h3>BASES Thrift Store</h3><p>Volunteering in a Vancouver thrift store.</p></div>
+      </article>
+    </div>
+    <div class="edu">
+      <span><b>English studies</b> · MOSAIC, Dec 2024 – Sep 2025</span>
+      <span><b>Post-Grad Diploma in Marketing</b> · Douglas College, 2026 – 2027</span>
+    </div>
+  </div>
+</section>
+
+<section id="design">
+  <div class="wrap proj">
+    <div class="stage">
+      <div class="gd">
+        <button class="shot book" data-p="book" aria-label="Open Pride and Prejudice book design"><img src="img/book-front.jpg" alt="Pride and Prejudice front cover"><img src="img/book-back.jpg" alt="Pride and Prejudice back cover"></button>
+        <button class="shot stem" data-p="stem" aria-label="Open Stem stationery"><img class="lg" src="img/stem-logo.png" alt="Stem logo"><img class="p" src="img/stem-letterhead.jpg" alt="Stem letterhead"><img class="p" src="img/stem-card.jpg" alt="Stem business card"></button>
+        <button class="shot braz" data-p="brazales" aria-label="Open Brazales logo"><img src="img/brazales-logo.png" alt="Brazales Poultry Farm logo"></button>
+        <p class="note"><span class="label">Tap a piece</span>Book design, brand stationery and a logo, made in Adobe InDesign and Illustrator.</p>
+      </div>
+    </div>
+    <div class="txt">
+      <div class="ttl left"><span class="caps">Graphic</span><span class="scr">Design</span></div>
+      <p><b>Pride and Prejudice.</b> A full book design: front cover, interior chapter spreads and back cover.</p>
+      <p><b>Stem · Elegant Apologies.</b> Identity for a floral shop: logo, letterhead and business card in burgundy, sweet white and calm green.</p>
+      <p><b>Brazales Poultry Farm.</b> Logo for a B2B poultry farm.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="digital">
+  <div class="wrap proj flip">
+    <div class="txt">
+      <div class="ttl left"><span class="caps">Digital</span><span class="scr">Marketing</span></div>
+      <p>Bookish is an SEO-optimized landing page for an independent bookstore concept in Metro Vancouver. I built it around a buyer persona based on analytics, with an email sign-up offer, staff picks and an FAQ written for search.</p>
+      <dl class="meta"><dt>Course</dt><dd>Digital Marketing · individual project</dd><dt>Focus</dt><dd>SEO, conversion, buyer persona</dd></dl>
+      <button class="btn" data-p="bookish" type="button">See the full page</button>
+    </div>
+    <div class="stage">
+      <button class="shot" data-p="bookish" aria-label="Open Bookish landing page">
+        <div class="browser shadow"><div class="bar"><i></i><i></i><i></i><span>bookish.ca</span></div><div class="view"><img src="img/bookish-full.jpg" alt="Bookish landing page"></div></div>
+      </button>
+      <div class="phone" aria-hidden="true"><img src="img/bookish-top.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="strategy">
+  <div class="wrap proj">
+    <div class="stage">
+      <div class="strat">
+        <button class="shot slides" data-p="shopify" aria-label="Open Shopify analysis"><img class="shadow" src="img/shopify-1.jpg" alt="Shopify company analysis title slide"><img class="shadow" src="img/shopify-2.jpg" alt="Shopify core competencies slide"><span class="cap">Shopify · company analysis</span></button>
+        <button class="shot" data-p="talavera" aria-label="Open Talavera IMC plan"><img class="shadow" src="img/talavera.jpg" alt="Talavera IMC plan cover"><span class="cap">Talavera · IMC plan</span></button>
+      </div>
+    </div>
+    <div class="txt">
+      <div class="ttl left"><span class="caps">Marketing</span><span class="scr">Strategy</span></div>
+      <p><b>Talavera IMC plan.</b> Integrated marketing communications plan for a Mexican coffee shop on Main Street, Vancouver, to build awareness and spotlight their pan de muerto. Team of 6, MARK 3340.</p>
+      <p><b>Shopify company analysis.</b> A 10-minute presentation with secondary research, SWOT, core competencies, value chain and growth opportunities. Team of 6.</p>
+      <p><b>Orange juice brand study.</b> Comparative analysis of orange juice brands: I created a survey, analyzed the results and presented them.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band end" id="contact">
+  <div class="wrap">
+    <div class="ttl"><span class="caps">Let's work</span><span class="scr">Together</span><p>I'm looking for a marketing internship in Vancouver for 2027. I'd love to hear about your brand.</p></div>
+    <p class="mail" id="mail">moncerrathmorales97@gmail.com</p>
+    <div class="row">
+      <button class="btn solid" id="copy" type="button">Copy email</button>
+      <a class="btn" href="mailto:moncerrathmorales97@gmail.com">Send an email</a>
+      <a class="btn" href="https://www.linkedin.com/in/moncerrathmorales" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="toast" id="toast" aria-live="polite"></p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Moncerrath Morales · Marketing · Vancouver, BC</span><span>moncerrathmorales97@gmail.com</span></div></footer>
+
+<dialog id="dlg" aria-labelledby="dTitle">
+  <div class="dlg">
+    <div class="pic" id="dPic"></div>
+    <div class="t">
+      <button class="btn close" id="dClose" type="button">Close</button>
+      <span class="label" id="dTag" style="color:var(--blue)"></span>
+      <h3 id="dTitle"></h3>
+      <p id="dBody" style="margin:0;color:var(--muted)"></p>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var P={
+    bookish:{tag:'Digital Marketing · individual',title:'Bookish landing page',img:['img/bookish-full.jpg'],body:'SEO-optimized landing page for an independent bookstore concept in Metro Vancouver, built around an analytics-based buyer persona.'},
+    book:{tag:'Document Design · final project',title:'Pride and Prejudice',img:['img/book-front.jpg','img/book-inside.jpg','img/book-back.jpg'],body:'Front cover, interior chapter spreads and back cover for Jane Austen\'s novel, in a sage and burgundy palette with silhouette illustration.'},
+    stem:{tag:'Stationery project',title:'Stem · Elegant Apologies',img:['img/stem-logo.png','img/stem-letterhead.jpg','img/stem-card.jpg'],body:'Brand identity for a floral shop positioned as delicate and timeless. The "t" becomes a stem; set in Reina Neue with burgundy, sweet white and calm green.'},
+    brazales:{tag:'Logo · Adobe Illustrator',title:'Brazales Poultry Farm',img:['img/brazales-logo.png'],body:'Logo for a B2B poultry farm: a hen silhouette carrying the B monogram, in forest green and golden yellow.'},
+    shopify:{tag:'Marketing Strategy · team of 6',title:'Shopify company analysis',img:['img/shopify-1.jpg','img/shopify-2.jpg'],body:'Company background, secondary research, SWOT, core competencies, value chain and growth opportunities.'},
+    talavera:{tag:'MARK 3340 · team of 6',title:'Talavera IMC plan',img:['img/talavera.jpg'],body:'Integrated marketing communications plan for a Mexican coffee shop on Main Street, Vancouver, to build awareness and spotlight their pan de muerto.'}
+  };
+  var dlg=document.getElementById('dlg');
+  function open(k){
+    var p=P[k]; if(!p) return;
+    document.getElementById('dTag').textContent=p.tag;
+    document.getElementById('dTitle').textContent=p.title;
+    document.getElementById('dBody').textContent=p.body;
+    var pic=document.getElementById('dPic'); pic.innerHTML='';
+    pic.style.background = k==='brazales' ? '#2f5e3b' : '';
+    p.img.forEach(function(s){var i=new Image();i.src=s;i.alt=p.title;pic.appendChild(i);});
+    if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+  }
+  document.querySelectorAll('[data-p]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.p)})});
+  document.getElementById('dClose').addEventListener('click',function(){dlg.close()});
+  dlg.addEventListener('click',function(e){if(e.target===dlg) dlg.close()});
+  var toast=document.getElementById('toast');
+  document.getElementById('copy').addEventListener('click',function(){
+    var t='moncerrathmorales97@gmail.com';
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);toast.textContent='Email selected. Press copy to save it.';}
+    try{navigator.clipboard.writeText(t).then(function(){toast.textContent='Email copied';},sel);}catch(e){sel();}
+  });
+})();
+</script>
+</body>
+</html>
